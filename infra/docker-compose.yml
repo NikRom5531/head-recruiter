@@ -1,0 +1,39 @@
+name: head-recruiter
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: head-recruiter-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-headrecruiter}
+      POSTGRES_USER: ${POSTGRES_USER:-headrecruiter}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-headrecruiter}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-headrecruiter} -d ${POSTGRES_DB:-headrecruiter}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: head-recruiter-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+  redis-data:

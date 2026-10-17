@@ -58,6 +58,24 @@ cd backend
 ./mvnw verify
 ```
 
+## Local infrastructure
+
+PostgreSQL and Redis for local development are provided as a Docker Compose
+stack:
+
+```bash
+cd infra
+docker compose up -d
+```
+
+See [infra/README.md](infra/README.md) for details.
+
+## Documentation
+
+- [Architecture overview](doc/architecture.md)
+- [Architecture Decision Records](doc/adr/)
+- [Contributing](CONTRIBUTING.md)
+
 ## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and the
