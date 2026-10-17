@@ -1,0 +1,47 @@
+### IntelliJ IDEA / JetBrains ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Java / Maven ###
+target/
+build/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+### Node / frontend ###
+node_modules/
+dist/
+.cache/
+*.log
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Local config / secrets ###
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml

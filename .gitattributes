@@ -1,0 +1,18 @@
+# Normalize line endings across platforms
+* text=auto eol=lf
+
+# Windows scripts
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Maven wrapper
+mvnw text eol=lf
+
+# Binary files
+*.jar binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
