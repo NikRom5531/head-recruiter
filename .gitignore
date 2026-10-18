@@ -45,3 +45,5 @@ Thumbs.db
 !.env.example
 *.local.yaml
 *.local.yml
+/backend/target/
+/doc/local/
