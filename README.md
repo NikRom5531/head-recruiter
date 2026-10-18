@@ -11,12 +11,12 @@ the hiring pipeline.
 
 ## Repository layout
 
-| Path        | Description                                            |
-|-------------|--------------------------------------------------------|
-| `backend/`  | Spring Boot backend (REST API, persistence, security)  |
-| `frontend/` | Web client (work in progress)                           |
+| Path        | Description                                                  |
+|-------------|--------------------------------------------------------------|
+| `backend/`  | Spring Boot backend (REST API, persistence, security)        |
+| `frontend/` | Web client (work in progress)                                |
 | `infra/`    | Infrastructure as code, local environment (work in progress) |
-| `doc/`      | Project documentation and design decisions              |
+| `doc/`      | Project documentation and design decisions                   |
 
 ## Technology stack
 
@@ -57,6 +57,25 @@ never commit secrets.
 cd backend
 ./mvnw verify
 ```
+
+## Local infrastructure
+
+PostgreSQL and Redis for local development are provided as a Docker Compose
+stack:
+
+```bash
+cd infra
+docker compose up -d
+```
+
+See [infra/README.md](infra/README.md) for details.
+
+## Documentation
+
+- [Architecture overview](doc/architecture.md)
+- [Architecture Decision Records](doc/adr/)
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
 
 ## Contributing
 
