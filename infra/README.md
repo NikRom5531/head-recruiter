@@ -5,10 +5,10 @@ Compose stack.
 
 ## Services
 
-| Service    | Image               | Port  | Purpose            |
-|------------|---------------------|-------|--------------------|
-| `postgres` | `postgres:17-alpine`| 5432  | Primary database   |
-| `redis`    | `redis:7-alpine`    | 6379  | Cache / sessions   |
+| Service    | Image                | Port | Purpose          |
+|------------|----------------------|------|------------------|
+| `postgres` | `postgres:17-alpine` | 5432 | Primary database |
+| `redis`    | `redis:7-alpine`     | 6379 | Cache / sessions |
 
 ## Usage
 
